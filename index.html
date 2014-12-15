@@ -12,7 +12,86 @@
 			<h1>Form.css - responsive forms</h1>
 			<p>Lorem ipsum</p>
 
-			<!-- here comes the form -->
+			<div class="example">
+				<h2>A simple register form</h2>
+
+				<form action="" method="POST" name="register" role="form" id="register">
+					<div class="text-firstName required">
+						<label for="firstName">First name</label>
+						<input type="text" name="firstName" placeholder="First name" id="firstName" value="">
+					</div>
+					<div class="text-lastName required">
+						<label for="lastName">Last name</label>
+						<input type="text" name="lastName" placeholder="Last name" id="lastName" value="">
+					</div>
+					<div class="multi_radio-gender">
+						<label>Gender</label>
+						<div class="multi-radio">
+							<label><input type="radio" name="gender" value="man"><span>Man</span></label>
+							<label><input type="radio" name="gender" value="woman"><span>Woman</span></label>
+						</div>
+					</div>
+					<div class="select-country">
+						<label for="country">Country</label>
+						<div class="custom-select">
+							<select name="country">
+								<option value="Belgium">Belgium</option>
+								<option value="Netherlands">Netherlands</option>
+								<option value="France">France</option>
+								<option value="Germany">Germany</option>
+							</select>
+						</div>
+					</div>
+					<div class="email-email required">
+						<label for="email">Email</label>
+						<input type="email" name="email" placeholder="example@email.com" id="email" value="">
+					</div>
+					<div class="text-phone">
+						<label for="phone">Phone number</label>
+						<input type="text" name="phone" placeholder="eg. 051 26 00 51" id="phone" value="">
+					</div>
+					<div class="checkbox-receiveNewsletter">
+						<label>Receive newsletter</label>
+						<input type="hidden" name="receiveNewsletter" value="0">
+						<label for="receiveNewsletter">
+							<input type="checkbox" name="receiveNewsletter" id="receiveNewsletter" value="1">
+							<span>Yes, i would like to receive a newsletter</span>
+						</label>
+					</div>
+					<div class="password-password required">
+						<label for="password">Password</label>
+						<input type="password" name="password" placeholder="Your password" id="password" value="">
+					</div>
+					<div class="password-passwordCheck required">
+						<label for="passwordCheck">Confirm password</label>
+						<input type="password" name="passwordCheck" placeholder="Your password again" id="passwordCheck" value="">
+					</div>
+					<div class="multi_checkbox-hobbies">
+						<label>Hobbies</label>
+						<div class="multi-checkbox">
+							<label><input type="checkbox" name="interests[]" value="movies"><span>Movies</span></label>
+							<label><input type="checkbox" name="interests[]" value="video-games"><span>Video games</span></label>
+							<label><input type="checkbox" name="interests[]" value="sports"><span>Sports</span></label>
+							<label><input type="checkbox" name="interests[]" value="travel"><span>Travel</span></label>
+						</div>
+					</div>
+					<div class="multi_text-address">
+						<label>Address</label>
+						<div class="multi-text">
+							<input type="text" name="address[]" placeholder="Address line 1" value="">
+							<input type="text" name="address[]" placeholder="Address line 2" value="">
+						</div>
+					</div>
+					<div class="text-job required">
+						<label for="job">Job</label>
+						<input type="text" name="job" placeholder="My job" id="job" value="">
+					</div>
+					<div class="button-set">
+						<button type="submit" name="submit" class="submit" value="">Register</button>
+					</div>
+				</form>
+
+			</div>
 
 		</div>
 	</body>
