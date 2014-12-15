@@ -1,0 +1,12 @@
+/* form.css */
+/* dynamic media queries */
+/* variables for form.css */
+/* breakpoints */
+/* Magento RWD */
+/* mobile styles */
+@media all and (min-width: 600px) {
+  /* tablet styles */
+}
+@media all and (min-width: 1000px) {
+  /* desktop styles */
+}

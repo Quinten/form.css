@@ -1,0 +1,19 @@
+/* form.css */
+
+@import "breakpoints";
+@import "var";
+
+/* mobile styles */
+
+@include breakpoint(min-width, $brp-medium) {
+
+/* tablet styles */
+
+}
+
+@include breakpoint(min-width, $brp-large) {
+
+/* desktop styles */
+
+}
+

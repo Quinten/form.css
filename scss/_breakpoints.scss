@@ -1,0 +1,13 @@
+/* dynamic media queries */
+
+@mixin breakpoint($point, $value: 0) {
+	@media all and ($point: $value) { 
+		@content;
+	}
+}
+
+@mixin between-breakpoints($min, $max) {
+	@media all and (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}

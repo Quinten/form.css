@@ -1,0 +1,71 @@
+/*** styles.css ***/
+/* some common styles that may be loaded before the form.css that we may need to correct */
+
+/* Box-sizing */
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Fonts and colors */
+
+body {
+	background-color: #fcfcfc;
+	color: #222;
+	font-size: 16px;
+	line-height: 1;
+	font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #111;
+	font-family: serif;
+	margin-bottom: .5em;
+}
+
+p {
+	line-height: 1.35;
+	margin-bottom: 1em;
+}
+
+/* A wrapper */
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1em;
+	margin-top: 3em;
+}
+
+/* Clear */
+
+.clear {
+	clear: both;
+	height: 0;
+}
+
+/* Clearfix */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
