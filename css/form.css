@@ -5,6 +5,7 @@
 /* Magento RWD */
 /* border-radius */
 /* textfield colors */
+/* description color */
 /* button colors */
 /* structure vars */
 /****************************/
@@ -232,6 +233,14 @@ label {
   display: inline-block;
 }
 
+p.description {
+  display: block;
+  line-height: 1.35;
+  font-size: .8em;
+  margin-bottom: 1.25em;
+  color: #999;
+}
+
 @media all and (min-width: 600px) {
   /* tablet structure */
   label {
@@ -265,6 +274,10 @@ label {
     margin-right: 0;
     margin-left: .5em;
   }
+
+  p.description {
+    padding-left: 190px;
+  }
 }
 @media all and (min-width: 1000px) {
   /* desktop structure */
@@ -274,5 +287,9 @@ label {
 
   .button-set {
     margin-left: 240px;
+  }
+
+  p.description {
+    padding-left: 250px;
   }
 }

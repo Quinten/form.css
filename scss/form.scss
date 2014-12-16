@@ -245,6 +245,14 @@ label {
 	display: inline-block;
 }
 
+p.description {
+	display: block;
+	line-height: 1.35;
+	font-size: .8em;
+	margin-bottom: 1.25em;
+	color: $description-color;
+}
+
 @include breakpoint(min-width, $brp-medium) {
 
 	/* tablet structure */
@@ -287,6 +295,10 @@ label {
 			margin-left: .5em;
 		}
 	}
+
+	p.description {
+		padding-left: $label-width + 10px;
+	}
 }
 
 @include breakpoint(min-width, $brp-large) {
@@ -299,6 +311,10 @@ label {
 
 	.button-set {
 		margin-left: $label-width-large;
+	}
+
+	p.description {
+		padding-left: $label-width-large + 10px;
 	}
 }
 

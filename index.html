@@ -9,8 +9,17 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function (){
+
 				$('#button-examples').find('button, .btn').click(function (e) {
 					alert(this.outerHTML);
+				});
+
+				$('input[name="toggle-descriptions"]').change(function(e) {
+					if(this.checked) {
+						$('form > div:not(.button-set)').append('<p class="description">This is a description paragraph.</p>');
+					} else {
+						$('p.description').remove();
+					}
 				});
 			});
 		</script>
@@ -18,7 +27,8 @@
 	<body>
 		<div class="wrapper">
 			<h1>Form.css - responsive forms</h1>
-			<p>This is a simple testbed for responsive forms.</p>
+			<p>This is a simple testbed for responsive forms. You can toggle the field descriptions, because we need to be able to see all the elements with our without them and what it does to margins.</p>
+			<p><label for="toggle-descriptions"><input type="checkbox" name="toggle-descriptions" /> show field descriptions</label></p>
 
 			<div class="example">
 				<h2>A simple register form</h2>
