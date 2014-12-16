@@ -125,6 +125,9 @@ button {
   position: relative;
   text-decoration: none;
   vertical-align: top;
+  /* make buttons less fugly on android */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn.sec,
