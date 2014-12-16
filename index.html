@@ -6,6 +6,14 @@
 		<title>Form.css - responsive forms</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/form.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function (){
+				$('#button-examples').find('button, .btn').click(function (e) {
+					alert(this.outerHTML);
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -92,6 +100,26 @@
 				</form>
 
 			</div>
+
+			<div class="example" id="button-examples">
+				<h2>Different buttons</h2>
+
+				<div>
+					<div>
+						<button type="button">button</button>
+						<button type="button" class="sec">button</button>
+						<button type="button" class="disabled">button</button>
+						<button type="button" class="sec disabled">button</button>
+						<button type="button" disabled>button</button>
+						<button type="button" class="sec" disabled>button</button>
+					</div>
+					<div>
+						<a href="#" class="btn">link</a>
+						<a href="#" class="btn sec">link</a>
+						<a href="#" class="btn disabled">link</a>
+						<a href="#" class="btn sec disabled">link</a>
+					</div>
+				</div>
 
 		</div>
 	</body>

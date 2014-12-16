@@ -63,3 +63,7 @@ p {
 .cf {
   *zoom: 1;
 }
+
+.example {
+  margin-bottom: 2em;
+}

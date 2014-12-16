@@ -8,3 +8,38 @@ $brp-large: 1000px;
 //$brp-medium: $bp-medium;
 //$brp-large: $bp-large;
 
+/* border-radius */
+$border-radius: 3px;
+
+/* textfield colors */
+$input-border-color: #ccc;
+$input-focus-border-color: #3263af;
+
+/* button colors */
+$button-bg-color: #3263af;
+$button-border-color: $button-bg-color;
+$button-txt-color: #fff;
+
+$button-bg-sec-color: #898989;
+$button-border-sec-color: $button-bg-sec-color;
+$button-txt-sec-color: #fff;
+
+$button-bg-disabled-color: #e5e5e5;
+$button-border-disabled-color: #ccc;
+$button-txt-disabled-color: #ccc;
+
+$button-bg-hover-color: darken($button-bg-color, 10%);
+$button-border-hover-color: $button-bg-hover-color;
+$button-txt-hover-color: #fff;
+
+$button-bg-sec-hover-color: darken($button-bg-sec-color, 10%);
+$button-border-sec-hover-color: $button-bg-sec-hover-color;
+$button-txt-sec-hover-color: #fff;
+
+$button-bg-active-color: lighten($button-bg-color, 10%);
+$button-border-active-color: $button-bg-active-color;
+$button-txt-active-color: #fff;
+
+$button-bg-sec-active-color: lighten($button-bg-sec-color, 10%);
+$button-border-sec-active-color: $button-bg-sec-active-color;
+$button-txt-sec-active-color: #fff;

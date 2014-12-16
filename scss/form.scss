@@ -3,7 +3,195 @@
 @import "breakpoints";
 @import "var";
 
-/* mobile styles */
+
+/****************************/
+/* Forms reset/base         */
+/****************************/
+
+/* to remove the outline on input fields click in firefox */
+input::-moz-focus-inner{
+	border: 0;
+}
+
+fieldset {
+	border: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="phone"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime"],
+input[type="date"],
+input[type="search"],
+input[type="datetime-local"],
+textarea,
+select[multiple="multiple"] {
+	width: 100%;
+	max-width: 22em;
+	border-radius: $border-radius;
+	-webkit-appearance: none;
+	border: 1px $input-border-color solid;
+	font-size: .9em;
+	padding: .5em;
+	margin-bottom: .5em;
+}
+
+input:focus,
+textarea:focus{
+	outline: none;
+	border-color: $input-focus-border-color;
+}
+
+button:focus {
+	outline: none;
+}
+
+/* Normalize buttons in IE */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* Hand cursor on clickable controls */
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+/* Trick with vertical align for radio and checkbox  */
+input[type="radio"],
+input[type="checkbox"] {
+  font-size: 110%;
+  position: relative;
+  top: -1px;
+  margin-right: .5em;
+}
+
+/* Normalize search fields */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+
+/****************************/
+/* BUTTONS                  */
+/****************************/
+
+/* Normal state */
+
+.btn,
+button {
+	display: inline-block;
+	-webkit-appearance: none;
+	border: 0;
+	background-color: $button-bg-color;
+	border: 1px $button-border-color solid;
+	color: $button-txt-color;
+	font-size: 1em;
+	border-radius: $border-radius;
+	text-align: left;
+
+	height: 2.5em;
+	line-height: 2.4em;
+	padding-right: 1em;
+	padding-left: 1em;
+
+	margin-bottom: .5em;
+	margin-right: .5em;
+	cursor: pointer;
+	position: relative;
+
+	text-decoration: none;
+}
+
+.btn.sec,
+button.sec {
+	background-color: $button-bg-sec-color;
+	border-color: $button-border-sec-color;
+	color: $button-txt-sec-color;
+}
+
+/* Hover & focus state */
+
+.btn:hover,
+button:hover,
+.btn:focus,
+button:focus {
+	background-color: $button-bg-hover-color;
+	border-color: $button-border-hover-color;
+	color: $button-txt-hover-color;
+}
+
+.btn.sec:hover,
+button.sec:hover,
+.btn.sec:focus,
+button.sec:focus {
+	background-color: $button-bg-sec-hover-color;
+	border-color: $button-border-sec-hover-color;
+	color: $button-txt-sec-hover-color;
+}
+
+/* Active state */
+
+.btn:active,
+button:active {
+	background-color: $button-bg-active-color;
+	border-color: $button-border-active-color;
+	color: $button-txt-active-color;
+}
+
+.btn.sec:active,
+button.sec:active {
+	background-color: $button-bg-sec-active-color;
+	border-color: $button-border-sec-active-color;
+	color: $button-txt-sec-active-color;
+}
+
+/* Disabled */
+
+button:disabled,
+button:disabled:hover,
+button:disabled:focus,
+button.disabled,
+button.disabled:hover,
+button.disabled:focus,
+.btn.disabled,
+.btn.disabled:hover,
+.btn.disabled:focus,
+button.sec:disabled,
+button.sec:disabled:hover,
+button.sec:disabled:focus,
+button.sec.disabled,
+button.sec.disabled:hover,
+button.sec.disabled:focus,
+.btn.sec.disabled,
+.btn.sec.disabled:hover,
+.btn.sec.disabled:focus {
+	background-color: $button-bg-disabled-color;
+	border-color: $button-border-disabled-color;
+	color: $button-txt-disabled-color;
+	cursor: default;
+}
+
+
 
 @include breakpoint(min-width, $brp-medium) {
 
