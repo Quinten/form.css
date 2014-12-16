@@ -192,6 +192,25 @@ button.sec.disabled:focus,
 	cursor: default;
 }
 
+div[class^="text-"],
+div[class^="multi_radio-"],
+div[class^="select-"],
+div[class^="email-"],
+div[class^="checkbox-"],
+div[class^="password-"],
+div[class^="multi_checkbox-"],
+div[class^="multi_text-"],
+div[class^="textarea-"] {
+	
+	&.required {
+
+		> label:after {
+			content:" *";
+			display: inline;
+		}
+	}
+}
+
 /* mobile structure */
 
 div[class^="text-"],

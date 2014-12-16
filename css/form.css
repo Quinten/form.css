@@ -186,6 +186,19 @@ button.sec.disabled:focus,
   cursor: default;
 }
 
+div[class^="text-"].required > label:after,
+div[class^="multi_radio-"].required > label:after,
+div[class^="select-"].required > label:after,
+div[class^="email-"].required > label:after,
+div[class^="checkbox-"].required > label:after,
+div[class^="password-"].required > label:after,
+div[class^="multi_checkbox-"].required > label:after,
+div[class^="multi_text-"].required > label:after,
+div[class^="textarea-"].required > label:after {
+  content: " *";
+  display: inline;
+}
+
 /* mobile structure */
 div[class^="text-"],
 div[class^="multi_radio-"],
