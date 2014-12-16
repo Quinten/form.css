@@ -13,6 +13,11 @@ input::-moz-focus-inner{
 	border: 0;
 }
 
+/* to remove yellow background with autofill in chrome etc */
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px $input-bg-color inset;
+}
+
 fieldset {
 	border: 0;
 }
@@ -48,6 +53,7 @@ select[multiple="multiple"] {
 	font-size: .9em;
 	padding: .5em;
 	margin-bottom: .5em;
+	background-color: $input-bg-color;
 }
 
 input:focus,
