@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/form.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/validate.js"></script>
 		<script>
 			$(document).ready(function (){
 
@@ -21,6 +22,8 @@
 						$('p.description').remove();
 					}
 				});
+
+				$('#register').validate();
 			});
 		</script>
 	</head>
@@ -38,11 +41,11 @@
 				<form action="" method="POST" name="register" role="form" id="register">
 					<div class="text-firstName required">
 						<label for="firstName">First name</label>
-						<input type="text" name="firstName" placeholder="First name" id="firstName" value="">
+						<input type="text" name="firstName" placeholder="First name" id="firstName" class="required" value="">
 					</div>
 					<div class="text-lastName required">
 						<label for="lastName">Last name</label>
-						<input type="text" name="lastName" placeholder="Last name" id="lastName" value="">
+						<input type="text" name="lastName" placeholder="Last name" id="lastName" class="required" value="">
 					</div>
 					<div class="multi_radio-gender">
 						<label>Gender</label>
@@ -64,7 +67,7 @@
 					</div>
 					<div class="email-email required">
 						<label for="email">Email</label>
-						<input type="email" name="email" placeholder="example@email.com" id="email" value="">
+						<input type="email" name="email" placeholder="example@email.com" id="email" class="required email" value="">
 					</div>
 					<div class="text-phone">
 						<label for="phone">Phone number</label>
@@ -82,11 +85,11 @@
 					</div>
 					<div class="password-password required">
 						<label for="password">Password</label>
-						<input type="password" name="password" placeholder="Your password" id="password" value="">
+						<input type="password" name="password" placeholder="Your password" id="password" class="required" value="">
 					</div>
 					<div class="password-passwordCheck required">
 						<label for="passwordCheck">Confirm password</label>
-						<input type="password" name="passwordCheck" placeholder="Your password again" id="passwordCheck" value="">
+						<input type="password" name="passwordCheck" placeholder="Your password again" id="passwordCheck" class="required" value="">
 					</div>
 					<div class="multi_checkbox-hobbies">
 						<label>Hobbies</label>
@@ -104,13 +107,13 @@
 							<input type="text" name="address[]" placeholder="Address line 2" value="">
 						</div>
 					</div>
-					<div class="textarea-comment required">
+					<div class="textarea-comment">
 						<label for="comment">Comment</label>
 						<textarea name="comment"></textarea>
 					</div>
 					<div class="text-job required">
 						<label for="job">Job</label>
-						<input type="text" name="job" placeholder="My job" id="job" value="">
+						<input type="text" name="job" placeholder="My job" id="job" class="required" value="">
 					</div>
 					<div class="button-set">
 						<button type="submit" name="submit" class="submit" value="">Register</button>
