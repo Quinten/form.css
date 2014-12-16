@@ -43,3 +43,7 @@ $button-txt-active-color: #fff;
 $button-bg-sec-active-color: lighten($button-bg-sec-color, 10%);
 $button-border-sec-active-color: $button-bg-sec-active-color;
 $button-txt-sec-active-color: #fff;
+
+/* structure vars */
+$label-width: 180px;
+$label-width-large: 240px;

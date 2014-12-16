@@ -120,6 +120,7 @@ button {
 	position: relative;
 
 	text-decoration: none;
+	vertical-align: top;
 }
 
 .btn.sec,
@@ -191,17 +192,94 @@ button.sec.disabled:focus,
 	cursor: default;
 }
 
+/* mobile structure */
 
+div[class^="text-"],
+div[class^="multi_radio-"],
+div[class^="select-"],
+div[class^="email-"],
+div[class^="checkbox-"],
+div[class^="password-"],
+div[class^="multi_checkbox-"],
+div[class^="multi_text-"],
+div[class^="textarea-"] {
+	display: block;
+	margin-bottom: .5em;
+}
+
+label {
+	display: block;
+	margin-bottom: .5em;
+	line-height: 1.35;
+	vertical-align: top;
+}
+
+.custom-select {
+	display: inline-block;
+	margin-bottom: .5em;
+}
+
+.mono-checkbox,
+.multi-checkbox,
+.multi-radio,
+.multi-text {
+	display: inline-block;
+}
 
 @include breakpoint(min-width, $brp-medium) {
 
-/* tablet styles */
+	/* tablet structure */
 
+	label {
+		display: inline-block;
+		min-width: $label-width;
+	}
+
+	.mono-checkbox,
+	.multi-checkbox,
+	.multi-radio,
+	.multi-text {
+
+		label {
+			display: block;
+			min-width: 0;
+		}
+	}
+
+	div[class^="text-"],
+	div[class^="email-"],
+	div[class^="password-"],
+	div[class^="multi_text-"],
+	div[class^="textarea-"] {
+
+		label {
+			line-height: 2;
+		}
+	}
+
+	.button-set {
+		overflow: hidden;
+		margin-left: $label-width;
+		max-width: 20em;
+
+		button, .btn {
+			float: right;
+			margin-right: 0;
+			margin-left: .5em;
+		}
+	}
 }
 
 @include breakpoint(min-width, $brp-large) {
 
-/* desktop styles */
+	/* desktop structure */
 
+	label {
+		min-width: $label-width-large;
+	}
+
+	.button-set {
+		margin-left: $label-width-large;
+	}
 }
 

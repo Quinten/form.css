@@ -61,10 +61,12 @@
 					<div class="checkbox-receiveNewsletter">
 						<label>Receive newsletter</label>
 						<input type="hidden" name="receiveNewsletter" value="0">
-						<label for="receiveNewsletter">
-							<input type="checkbox" name="receiveNewsletter" id="receiveNewsletter" value="1">
-							<span>Yes, i would like to receive a newsletter</span>
-						</label>
+						<div class="mono-checkbox">
+							<label for="receiveNewsletter">
+								<input type="checkbox" name="receiveNewsletter" id="receiveNewsletter" value="1">
+								<span>Yes, i would like to receive a newsletter</span>
+							</label>
+						</div>
 					</div>
 					<div class="password-password required">
 						<label for="password">Password</label>
@@ -90,12 +92,17 @@
 							<input type="text" name="address[]" placeholder="Address line 2" value="">
 						</div>
 					</div>
+					<div class="textarea-comment required">
+						<label for="comment">Comment</label>
+						<textarea name="comment"></textarea>
+					</div>
 					<div class="text-job required">
 						<label for="job">Job</label>
 						<input type="text" name="job" placeholder="My job" id="job" value="">
 					</div>
 					<div class="button-set">
 						<button type="submit" name="submit" class="submit" value="">Register</button>
+						<a href="" class="btn sec">Cancel</a>
 					</div>
 				</form>
 

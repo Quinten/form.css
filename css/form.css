@@ -6,6 +6,7 @@
 /* border-radius */
 /* textfield colors */
 /* button colors */
+/* structure vars */
 /****************************/
 /* Forms reset/base         */
 /****************************/
@@ -116,6 +117,7 @@ button {
   cursor: pointer;
   position: relative;
   text-decoration: none;
+  vertical-align: top;
 }
 
 .btn.sec,
@@ -184,9 +186,80 @@ button.sec.disabled:focus,
   cursor: default;
 }
 
+/* mobile structure */
+div[class^="text-"],
+div[class^="multi_radio-"],
+div[class^="select-"],
+div[class^="email-"],
+div[class^="checkbox-"],
+div[class^="password-"],
+div[class^="multi_checkbox-"],
+div[class^="multi_text-"],
+div[class^="textarea-"] {
+  display: block;
+  margin-bottom: .5em;
+}
+
+label {
+  display: block;
+  margin-bottom: .5em;
+  line-height: 1.35;
+  vertical-align: top;
+}
+
+.custom-select {
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+.mono-checkbox,
+.multi-checkbox,
+.multi-radio,
+.multi-text {
+  display: inline-block;
+}
+
 @media all and (min-width: 600px) {
-  /* tablet styles */
+  /* tablet structure */
+  label {
+    display: inline-block;
+    min-width: 180px;
+  }
+
+  .mono-checkbox label,
+  .multi-checkbox label,
+  .multi-radio label,
+  .multi-text label {
+    display: block;
+    min-width: 0;
+  }
+
+  div[class^="text-"] label,
+  div[class^="email-"] label,
+  div[class^="password-"] label,
+  div[class^="multi_text-"] label,
+  div[class^="textarea-"] label {
+    line-height: 2;
+  }
+
+  .button-set {
+    overflow: hidden;
+    margin-left: 180px;
+    max-width: 20em;
+  }
+  .button-set button, .button-set .btn {
+    float: right;
+    margin-right: 0;
+    margin-left: .5em;
+  }
 }
 @media all and (min-width: 1000px) {
-  /* desktop styles */
+  /* desktop structure */
+  label {
+    min-width: 240px;
+  }
+
+  .button-set {
+    margin-left: 240px;
+  }
 }
